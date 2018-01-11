@@ -43,8 +43,8 @@ def main():
     run_test_append_string()
     run_test_double()
     run_test_shrink()
-#     run_test_double_then_shrink()
-#     run_test_reset()
+    run_test_double_then_shrink()
+    run_test_reset()
 #     run_test_steal()
 #     run_test_get_history()
 #     run_test_combined_box()
@@ -288,9 +288,8 @@ class Box(object):
         return extra
 
 
-
         # --------------------------------------------------------------
-        # TODO: 5. Implement and test this function.
+        # DONE: 5. Implement and test this function.
         #     The testing code is already written for you (above).
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -346,6 +345,9 @@ class Box(object):
           :type new_volume: int
         """
 
+        count = 0
+
+        #for k in range (len(self.contents)):
         self.double()
         self.shrink(new_volume)
 
