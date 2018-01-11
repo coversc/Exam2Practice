@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Caitlin Coverstone.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -56,6 +56,13 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    #Test 1
+    sequence = [2,10,5,-20,8]
+    expected = [8,16,11,-14,14]
+    actual = practice_problem2a(sequence, 6)
+    print('Actual', actual)
+    print('Expected', expected)
+
 
 def practice_problem2a(sequence, delta):
     """
@@ -75,6 +82,12 @@ def practice_problem2a(sequence, delta):
       :type sequence: [int]
       :type delta:    int
     """
+
+    for k in range (len(sequence)):
+        sequence = sequence[k] + delta
+        return sequence
+
+
     ####################################################################
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
@@ -169,6 +182,12 @@ def practice_problem2b(sequence):
     Type hints:
       :type sequence [str]
     """
+
+    for k in range (len(sequence)):
+        sequence = sequence[k]
+        return sequence
+
+
     ####################################################################
     # TODO: 4. Implement and test this function.
     #     The testing code is already written for you (above).
