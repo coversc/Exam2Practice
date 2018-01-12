@@ -36,7 +36,7 @@ def main():
     run_test_practice_problem3b()
     run_test_practice_problem3c()
     run_test_practice_problem3d()
-    run_test_practice_problem3e()
+    #run_test_practice_problem3e()
 
 
 def is_prime(n):
@@ -156,12 +156,16 @@ def practice_problem3a(circles):
       :type sequence: [rg.Circle]
     """
 
+    x = 1
     for k in range (len(circles)):
-        x = circles.center.x
+        x = x * circles[k].center.x
+    return x
+
+
 
 
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -270,8 +274,15 @@ def practice_problem3b(sequence):
     Type hints:
       :type: sequence: list    or tuple or string
     """
+
+    x = len(sequence)
+    for k in range (len(sequence)-1):
+        if  sequence[x-1] == sequence[k]:
+            return True
+    return False
+
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:  You are NOT allowed to use the
@@ -358,8 +369,15 @@ def practice_problem3c(sequence):
     Type hints:
       :type: sequence: list    or tuple or string
     """
+
+    sequence1 = []
+    for k in range (len(sequence)):
+       if sequence[k] == 0:
+           sequence1 = sequence1 + [k]
+    return sequence1
+
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -440,8 +458,14 @@ def practice_problem3d(sequence):
     Type hints:
       :type: sequence: list    or tuple or string
     """
+
+    for k in range (len(sequence)):
+        if sequence[k] == 0:
+            return k
+    return -1
+
     ####################################################################
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -465,6 +489,11 @@ def practice_problem3d(sequence):
     #
     #          This solution should *** HAVE NO LOOP (no FOR). ***
     ####################################################################
+
+    x = practice_problem3c(sequence)
+    if len(x) == 0:
+        return -1
+    return x[0]
 
 
 def run_test_practice_problem3e():
