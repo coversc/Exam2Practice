@@ -84,8 +84,8 @@ def practice_problem2a(sequence, delta):
     """
 
     for k in range (len(sequence)):
-        sequence = sequence[k] + delta
-        return sequence
+        sequence[k] = sequence[k] + delta
+    return sequence
 
 
     ####################################################################
@@ -183,13 +183,15 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
 
+    string = ''
     for k in range (len(sequence)):
-        sequence = sequence[k]
-        return sequence
+        if len(sequence[k])>0:
+            string = string + sequence[k][0] #0th value in the string
+    return string
 
 
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
