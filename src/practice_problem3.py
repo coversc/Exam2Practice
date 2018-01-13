@@ -36,7 +36,7 @@ def main():
     run_test_practice_problem3b()
     run_test_practice_problem3c()
     run_test_practice_problem3d()
-    #run_test_practice_problem3e()
+    run_test_practice_problem3e()
 
 
 def is_prime(n):
@@ -555,6 +555,13 @@ def practice_problem3e(sequence):
     Type hints:
       :type sequence: list(float)    or tuple(float)
     """
+
+    sum = 0
+    for k in range (len(sequence)):
+        if k % 2 == 0:
+            sum = sum + sequence[k]
+        return sum
+
     # ------------------------------------------------------------------
     # TODO: 7. Implement and test this function.
     #     The testing code is already written for you (above).
