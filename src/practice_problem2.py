@@ -30,8 +30,9 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem2a()
-    run_test_practice_problem2b()
+    #run_test_practice_problem2a()
+    #run_test_practice_problem2b()
+    run_test_foo()
 
 
 # ----------------------------------------------------------------------
@@ -198,6 +199,20 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+
+def run_test_foo():
+    strings = ['hello', 'go', 'blah']
+    expected = 'hgb'
+    actual = foo(strings)
+    print('Actual', actual)
+    print('Expected', expected)
+#practice
+
+def foo(strings):
+    list = ''
+    for k in range(len(strings)):
+        list =list + strings[k][0]
+    return list
 
 
 # ----------------------------------------------------------------------
